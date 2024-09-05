@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Golos_Text } from 'next/font/google'
+import { golosText, inter } from '@/app/fonts'
 import './globals.scss'
-
-const golosText = Golos_Text({ subsets: ['latin'] })
+import { cn } from '@/shared/lib/utils/cn'
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={golosText.className}>{children}</body>
+            <body className={cn(golosText.className, inter.className)}>{children}</body>
         </html>
     )
 }

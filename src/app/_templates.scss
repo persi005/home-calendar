@@ -1,0 +1,26 @@
+%button {
+    transition: var(--transition-regular);
+    cursor: pointer;
+
+    &:hover {
+        &:active:not(:disabled) {
+            opacity: 0.7;
+        }
+    }
+}
+
+%icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %button;
+
+    svg {
+        --size: 12px;
+        --color: red;
+
+        width: var(--size);
+        height: var(--size);
+        color: var(--color);
+    }
+}

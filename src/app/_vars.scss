@@ -1,0 +1,94 @@
+:root {
+    // #region Icon size
+    --icon-size-12: 12px;
+    --icon-size-16: 16px;
+    // #endregion
+
+    // #region Border radius
+    --border-radius-6: 6px;
+    --border-radius-8: 8px;
+    --border-radius-12: 12px;
+    --border-radius-100: 100px;
+    // #endregion
+
+    // #region Colors
+    --text-color-white: var(--white);
+    --text-color-black: var(--black);
+
+    --white: #ffffff;
+    --black: var(--gray-950);
+
+    --gray-50: #f8fafa;
+    --gray-100: #f2f3f5;
+    --gray-200: #e7ebed;
+    --gray-300: #d4dade;
+    --gray-400: #bac3cb;
+    --gray-500: #97a2af;
+    --gray-600: #8691a1;
+    --gray-700: #747d8d;
+    --gray-800: #616976;
+    --gray-900: #505762;
+    --gray-950: #343941;
+
+    --blue-50: #f2f7fc;
+    --blue-100: #e2edf7;
+    --blue-200: #cce0f1;
+    --blue-300: #a9cde7;
+    --blue-400: #7fb3db;
+    --blue-500: #5892cd;
+    --blue-600: #4d80c3;
+    --blue-700: #436db2;
+    --blue-800: #3c5a91;
+    --blue-900: #344c74;
+    --blue-950: #233048;
+
+    --red-50: #fef3f2;
+    --red-100: #fde7e6;
+    --red-200: #fbd0d0;
+    --red-300: #f7abaa;
+    --red-400: #f27a7c;
+    --red-500: #e84b52;
+    --red-600: #d73443;
+    --red-700: #b31d2f;
+    --red-800: #961b2d;
+    --red-900: #801b2d;
+    --red-950: #470a13;
+
+    --event-period-background-red: #ffe2e2;
+    --event-period-background-orange: #fff0e2;
+    --event-period-background-yellow: #fff8d6;
+    --event-period-background-green: #e5f3e3;
+    --event-period-background-aqua: #e6f5f1;
+    --event-period-background-blue: #e2eefd;
+    --event-period-background-purple: #f1e2fd;
+    --event-period-background-pink: #ffe6ff;
+    --event-period-background-red: #ffe2e2;
+
+    --event-period-border-red: #ee9393;
+    --event-period-border-orange: #e7b281;
+    --event-period-border-yellow: #e5c964;
+    --event-period-border-green: #a2de99;
+    --event-period-border-aqua: #abdfd2;
+    --event-period-border-blue: #82b3ec;
+    --event-period-border-purple: #cca2ec;
+    --event-period-border-pink: #eaa5ec;
+
+    --event-icon-background-red: #fbcaca;
+    --event-icon-background-orange: #fad8a5;
+    --event-icon-background-yellow: #fbf4b3;
+    --event-icon-background-green: #ccf4cf;
+    --event-icon-background-aqua: #c7ecea;
+    --event-icon-background-blue: #d7e5ff;
+    --event-icon-background-purple: #eddbfc;
+    --event-icon-background-pink: #fdd3f1;
+
+    --event-icon-color-red: #4d1414;
+    --event-icon-color-orange: #503b1e;
+    --event-icon-color-yellow: #594500;
+    --event-icon-color-green: #1a5319;
+    --event-icon-color-aqua: #0d423f;
+    --event-icon-color-blue: #162b52;
+    --event-icon-color-purple: #2f1246;
+    --event-icon-color-pink: #3f0e31;
+    // #endregion
+}
