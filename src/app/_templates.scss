@@ -1,10 +1,12 @@
 %button {
+    border-width: 0px;
     transition: var(--transition-regular);
     cursor: pointer;
 
     &:hover {
         &:active:not(:disabled) {
             opacity: 0.7;
+            transform: scale(0.97);
         }
     }
 }
@@ -16,11 +18,8 @@
     @extend %button;
 
     svg {
-        --size: 12px;
-        --color: red;
-
-        width: var(--size);
-        height: var(--size);
-        color: var(--color);
+        width: var(--icon-size, 12px);
+        height: var(--icon-size, 12px);
+        color: var(--icon-background, red);
     }
 }

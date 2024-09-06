@@ -1,18 +1,50 @@
+@use './templates' as *;
+
 .main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 316px 1fr;
 }
 
 .sidebar {
+    padding: 12px;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    gap: 8px;
+
     &Header {
+        height: 28px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr max-content;
+
         &__titleBox {
+            line-height: 1.2;
         }
 
         &__title {
+            color: var(--gray-800);
+            font-size: var(--font-size-16);
         }
 
         &__buttonGroup {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            gap: 10px;
         }
 
         &__button {
+            width: 36px;
+            height: 24px;
+            background: var(--blue-100);
+            border-radius: var(--border-radius-100);
+            @extend %icon-button;
+
+            svg {
+                --icon-size: var(--icon-size-12);
+                --icon-background: var(--blue-700);
+            }
         }
     }
 

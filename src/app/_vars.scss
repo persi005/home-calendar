@@ -1,4 +1,6 @@
 :root {
+    --transition-regular: ease-in-out 0.1s;
+
     // #region Icon size
     --icon-size-12: 12px;
     --icon-size-16: 16px;
@@ -9,6 +11,11 @@
     --border-radius-8: 8px;
     --border-radius-12: 12px;
     --border-radius-100: 100px;
+    // #endregion
+
+    // #region Font size
+    --font-size-14: 14px;
+    --font-size-16: 16px;
     // #endregion
 
     // #region Colors
