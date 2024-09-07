@@ -1,3 +1,4 @@
+import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
 import PlusSvg from '../../public/icons/symbol/plus.svg'
 import styles from './page.module.scss'
 
@@ -17,7 +18,9 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className={styles.sidebar__content}></div>
+                <div className={styles.sidebar__content}>
+                    <TextDivider title={'Test'} />
+                </div>
             </div>
 
             <div className={styles.content}></div>
