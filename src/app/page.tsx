@@ -1,6 +1,6 @@
-import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
-import PlusSvg from '../../public/icons/symbol/plus.svg'
+import PlusSvg from '/public/icons/symbol/plus.svg'
 import styles from './page.module.scss'
+import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
 
 export default function Home() {
     return (
