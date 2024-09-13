@@ -17,6 +17,7 @@
     --font-size-12: 12px;
     --font-size-14: 14px;
     --font-size-16: 16px;
+    --font-size-20: 20px;
     // #endregion
 
     // #region Colors
@@ -62,41 +63,41 @@
     --red-900: #801b2d;
     --red-950: #470a13;
 
-    --event-period-background-red: #ffe2e2;
-    --event-period-background-orange: #fff0e2;
-    --event-period-background-yellow: #fff8d6;
-    --event-period-background-green: #e5f3e3;
-    --event-period-background-aqua: #e6f5f1;
-    --event-period-background-blue: #e2eefd;
-    --event-period-background-purple: #f1e2fd;
-    --event-period-background-pink: #ffe6ff;
-    --event-period-background-red: #ffe2e2;
+    --calendar-event-background-red: #fbcaca;
+    --calendar-event-background-orange: #fad8a5;
+    --calendar-event-background-yellow: #fbf4b3;
+    --calendar-event-background-green: #ccf4cf;
+    --calendar-event-background-aqua: #c7ecea;
+    --calendar-event-background-blue: #d7e5ff;
+    --calendar-event-background-purple: #eddbfc;
+    --calendar-event-background-pink: #fdd3f1;
 
-    --event-period-border-red: #ee9393;
-    --event-period-border-orange: #e7b281;
-    --event-period-border-yellow: #e5c964;
-    --event-period-border-green: #a2de99;
-    --event-period-border-aqua: #abdfd2;
-    --event-period-border-blue: #82b3ec;
-    --event-period-border-purple: #cca2ec;
-    --event-period-border-pink: #eaa5ec;
+    --calendar-event-color-red: #4d1414;
+    --calendar-event-color-orange: #503b1e;
+    --calendar-event-color-yellow: #594500;
+    --calendar-event-color-green: #1a5319;
+    --calendar-event-color-aqua: #0d423f;
+    --calendar-event-color-blue: #162b52;
+    --calendar-event-color-purple: #2f1246;
+    --calendar-event-color-pink: #3f0e31;
 
-    --event-icon-background-red: #fbcaca;
-    --event-icon-background-orange: #fad8a5;
-    --event-icon-background-yellow: #fbf4b3;
-    --event-icon-background-green: #ccf4cf;
-    --event-icon-background-aqua: #c7ecea;
-    --event-icon-background-blue: #d7e5ff;
-    --event-icon-background-purple: #eddbfc;
-    --event-icon-background-pink: #fdd3f1;
+    --calendar-event-period-background-red: #ffe2e2;
+    --calendar-event-period-background-orange: #fff0e2;
+    --calendar-event-period-background-yellow: #fff8d6;
+    --calendar-event-period-background-green: #e5f3e3;
+    --calendar-event-period-background-aqua: #e6f5f1;
+    --calendar-event-period-background-blue: #e2eefd;
+    --calendar-event-period-background-purple: #f1e2fd;
+    --calendar-event-period-background-pink: #ffe6ff;
+    --calendar-event-period-background-red: #ffe2e2;
 
-    --event-icon-color-red: #4d1414;
-    --event-icon-color-orange: #503b1e;
-    --event-icon-color-yellow: #594500;
-    --event-icon-color-green: #1a5319;
-    --event-icon-color-aqua: #0d423f;
-    --event-icon-color-blue: #162b52;
-    --event-icon-color-purple: #2f1246;
-    --event-icon-color-pink: #3f0e31;
+    --calendar-event-period-border-red: #ee9393;
+    --calendar-event-period-border-orange: #e7b281;
+    --calendar-event-period-border-yellow: #e5c964;
+    --calendar-event-period-border-green: #a2de99;
+    --calendar-event-period-border-aqua: #abdfd2;
+    --calendar-event-period-border-blue: #82b3ec;
+    --calendar-event-period-border-purple: #cca2ec;
+    --calendar-event-period-border-pink: #eaa5ec;
     // #endregion
 }

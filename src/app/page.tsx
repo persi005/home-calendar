@@ -1,6 +1,8 @@
+import { Temporal } from '@js-temporal/polyfill'
 import PlusSvg from '/public/icons/symbol/plus.svg'
 import styles from './page.module.scss'
 import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
+import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
 
 export default function Home() {
     return (
@@ -20,6 +22,11 @@ export default function Home() {
 
                 <div className={styles.sidebar__content}>
                     <TextDivider title={'Test'} />
+                    <CalendarEvent emoji="🏀" color="red" />
+                    <TextDivider title={'Test'} />
+                    <CalendarEvent emoji="🏀" color="red" time={Temporal.Now.instant().toString()} />
+                    <TextDivider title={'Test'} />
+                    <CalendarEvent emoji="🏀" color="red" time={Temporal.Now.instant().toString()} isHour12={true} />
                 </div>
             </div>
 

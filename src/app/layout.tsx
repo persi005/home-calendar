@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn(golosText.className)}>{children}</body>
+            <body className={cn(golosText.variable, inter.variable)}>{children}</body>
         </html>
     )
 }
