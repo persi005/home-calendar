@@ -1,0 +1,58 @@
+.CalendarPeriodIcon {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--border-radius-100);
+    user-select: none;
+
+    &[data-size='s'] {
+        min-width: 16px;
+        max-width: 16px;
+        min-height: 16px;
+        max-height: 16px;
+        font-size: var(--font-size-12);
+    }
+
+    &[data-size='m'] {
+        min-width: 24px;
+        max-width: 24px;
+        min-height: 24px;
+        max-height: 24px;
+        font-size: var(--font-size-14);
+    }
+
+    &[data-color='red'] {
+        background: var(--calendar-event-period-background-red);
+        border-color: var(--calendar-event-period-border-red);
+    }
+    &[data-color='orange'] {
+        background: var(--calendar-event-period-background-orange);
+        border-color: var(--calendar-event-period-border-orange);
+    }
+    &[data-color='yellow'] {
+        background: var(--calendar-event-period-background-yellow);
+        border-color: var(--calendar-event-period-border-yellow);
+    }
+    &[data-color='green'] {
+        background: var(--calendar-event-period-background-green);
+        border-color: var(--calendar-event-period-border-green);
+    }
+    &[data-color='aqua'] {
+        background: var(--calendar-event-period-background-aqua);
+        border-color: var(--calendar-event-period-border-aqua);
+    }
+    &[data-color='blue'] {
+        background: var(--calendar-event-period-background-blue);
+        border-color: var(--calendar-event-period-border-blue);
+    }
+    &[data-color='purple'] {
+        background: var(--calendar-event-period-background-purple);
+        border-color: var(--calendar-event-period-border-purple);
+    }
+    &[data-color='pink'] {
+        background: var(--calendar-event-period-background-pink);
+        border-color: var(--calendar-event-period-border-pink);
+    }
+}

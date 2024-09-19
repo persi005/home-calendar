@@ -1,0 +1,33 @@
+.calendarBox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dayWeekGroup {
+    min-height: 22px;
+    max-height: 22px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    p {
+        color: var(--gray-500);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: -0.3px;
+    }
+}
+
+.calendar {
+    padding: 2px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--border-radius-8);
+}
+
+.row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(7, 1fr);
+}

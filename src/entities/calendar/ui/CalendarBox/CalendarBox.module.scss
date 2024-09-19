@@ -1,0 +1,41 @@
+.box {
+    padding: 12px;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    gap: 16px;
+}
+
+.header {
+    position: relative;
+    min-height: 28px;
+    max-height: 28px;
+}
+
+.headerTitleBox {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+    p {
+        color: var(--gray-800);
+        font-size: var(--font-size-16);
+        pointer-events: all;
+        letter-spacing: -0.1px;
+    }
+}
+
+.buttonBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.buttonGroup {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
