@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/src/shared/list/ui/divider/ListDivider.module.scss'
+import styles from '@/entities/calendar/ui/MonthCalendar/MonthCalendar.module.scss'
 
 type Props = {}
 
