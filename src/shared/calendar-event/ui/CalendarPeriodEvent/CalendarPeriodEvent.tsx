@@ -1,7 +1,7 @@
 'use client'
 
 import styles from '@/shared/calendar-event/ui/CalendarPeriodEvent/CalendarPeriodEvent.module.scss'
-import { CalendarPeriodIcon } from '../CalendarPeriodIcon/CalendarPeriodIcon'
+import { CalendarPeriodIcon } from '@/shared/calendar-event/ui/CalendarPeriodIcon/CalendarPeriodIcon'
 
 type Props = {
     emoji: string
