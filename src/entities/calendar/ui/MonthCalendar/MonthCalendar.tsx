@@ -28,6 +28,33 @@ export function MonthCalendar({}: Props) {
                     <CalendarDay />
                     <CalendarDay />
                 </div>
+                <div className={styles.row}>
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                </div>
+                <div className={styles.row}>
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                </div>
+                <div className={styles.row}>
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                    <CalendarDay />
+                </div>
             </div>
         </div>
     )
