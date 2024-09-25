@@ -9,7 +9,7 @@
     max-height: 22px;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: max-content;
+    grid-auto-columns: 1fr;
 
     p {
         color: var(--gray-500);
