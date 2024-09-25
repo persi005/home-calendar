@@ -1,0 +1,30 @@
+.button {
+    --button-background: unset;
+    --button-background-hover: unset;
+    --button-color: unset;
+
+    padding: 0 12px;
+    min-height: 32px;
+    max-height: 32px;
+    background: var(--button-background);
+    border-radius: var(--border-radius-8);
+    color: var(--button-color);
+
+    &:hover:not(:disabled) {
+        background: var(--button-background-hover);
+    }
+
+    &[data-variant='tinted'] {
+        &[data-color='blue'] {
+            --button-background: var(--blue-100);
+            --button-background-hover: var(--blue-200);
+            --button-color: var(--blue-700);
+        }
+
+        &[data-color='gray'] {
+            --button-background: var(--gray-100);
+            --button-background-hover: var(--gray-200);
+            --button-color: var(--gray-700);
+        }
+    }
+}
