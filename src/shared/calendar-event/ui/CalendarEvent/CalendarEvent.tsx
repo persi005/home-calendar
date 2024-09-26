@@ -4,13 +4,14 @@ import styles from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent.modul
 import { DateHelper } from '@/shared/lib/utils/dateHelper'
 
 type Props = {
+    size?: 'medium' | 'large'
     emoji: string
     color: 'red' | 'orange' | 'yellow' | 'green' | 'aqua' | 'blue' | 'purple' | 'pink'
     date?: string
     isHour12?: boolean
 }
 
-export function CalendarEvent({ emoji, color, date, isHour12 }: Props) {
+export function CalendarEvent({ size = 'medium', emoji, color, date, isHour12 }: Props) {
     let time, period
     if (date) {
         time = DateHelper.GetDetails(date).time
@@ -22,7 +23,7 @@ export function CalendarEvent({ emoji, color, date, isHour12 }: Props) {
     }
 
     return (
-        <div className={styles.CalendarEvent} data-color={color}>
+        <div className={styles.CalendarEvent} data-color={color} data-size={size}>
             {isHour12 && <p className={styles.CalendarEvent__hour12}>{period}</p>}
             <p className={styles.CalendarEvent__emoji}>{emoji}</p>
             {time && <p className={styles.CalendarEvent__time}>{time}</p>}

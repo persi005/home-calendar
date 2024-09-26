@@ -1,31 +1,53 @@
 .CalendarEvent {
-    min-width: 40px;
-    max-width: 40px;
-    min-height: 24px;
-    max-height: 24px;
     display: grid;
     justify-content: center;
     border-radius: var(--border-radius-100);
     box-shadow: inset 0px 1px 1px 0px rgba($color: #000000, $alpha: 0.12);
     user-select: none;
-    column-gap: 1px;
 
-    &:has([class*='__time']) {
-        [class*='__emoji'] {
-            margin-top: -4px;
-            font-size: 15px;
-        }
+    &:not(&:has([class*='__time']), &:has([class*='__hour12'])) {
+        align-items: center;
     }
 
     &:has([class*='__time'], [class*='__hour12']) {
         grid-template-areas: 'hour12 emoji' 'time time';
+        column-gap: 1px;
     }
 
     &:has([class*='__time']):not(:has([class*='__hour12'])) {
         grid-template-areas: 'emoji' 'time';
+        column-gap: 1px;
 
         [class*='__emoji'] {
             text-align: center;
+        }
+    }
+
+    &[data-size='medium'] {
+        min-width: 40px;
+        max-width: 40px;
+        min-height: 24px;
+        max-height: 24px;
+
+        [class*='__emoji'] {
+            font-size: var(--font-size-20);
+        }
+
+        &:has([class*='__time']) {
+            [class*='__emoji'] {
+                margin-top: -4px;
+                font-size: 15px;
+            }
+        }
+    }
+    &[data-size='large'] {
+        min-width: 60px;
+        max-width: 60px;
+        min-height: 36px;
+        max-height: 36px;
+
+        [class*='__emoji'] {
+            font-size: 26px;
         }
     }
 
@@ -33,37 +55,30 @@
         background: var(--calendar-event-background-red);
         color: var(--calendar-event-color-red);
     }
-
     &[data-color='orange'] {
         background: var(--calendar-event-background-orange);
         color: var(--calendar-event-color-orange);
     }
-
     &[data-color='yellow'] {
         background: var(--calendar-event-background-yellow);
         color: var(--calendar-event-color-yellow);
     }
-
     &[data-color='green'] {
         background: var(--calendar-event-background-green);
         color: var(--calendar-event-color-green);
     }
-
     &[data-color='aqua'] {
         background: var(--calendar-event-background-aqua);
         color: var(--calendar-event-color-aqua);
     }
-
     &[data-color='blue'] {
         background: var(--calendar-event-background-blue);
         color: var(--calendar-event-color-blue);
     }
-
     &[data-color='purple'] {
         background: var(--calendar-event-background-purple);
         color: var(--calendar-event-color-purple);
     }
-
     &[data-color='pink'] {
         background: var(--calendar-event-background-pink);
         color: var(--calendar-event-color-pink);
@@ -71,7 +86,6 @@
 
     &__emoji {
         grid-area: emoji;
-        font-size: var(--font-size-20);
     }
 
     &__time {
