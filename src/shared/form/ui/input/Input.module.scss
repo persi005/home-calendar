@@ -1,0 +1,14 @@
+.input {
+    padding: 0 10px;
+    min-height: 32px;
+    max-height: 32px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius-8);
+    color: inherit;
+    font-size: var(--font-size-16);
+
+    &::placeholder {
+        color: var(--gray-500);
+    }
+}
