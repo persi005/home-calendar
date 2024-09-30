@@ -6,7 +6,6 @@ import { InputActionIcon } from '@/entities/adding-event/ui/input-action-icon/In
 import { LinkButton } from '@/shared/buttons/ui/link-button/LinkButton'
 import { PopupButton } from '@/shared/buttons/ui/popup-button/PopupButton'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
-import { FieldBoxHeader } from '@/shared/form/ui/field-box-header/FieldBoxHeader'
 import { Input } from '@/shared/form/ui/input/Input'
 import { Selector } from '@/shared/form/ui/selector/Selector'
 import { cn } from '@/shared/lib/utils/cn'
@@ -43,24 +42,72 @@ export function AddingEventPopup({ className }: Props) {
                     <hr className={styles.popup__divider} />
 
                     <div className={styles.popup__section}>
-                        <FieldBoxHeader title={'Дата события'} />
+                        <div className="fieldBoxHeader">
+                            <p>Дата события</p>
+                        </div>
 
-                        <LinkButton>
-                            Добавить дату
-                            <InputActionIcon variant={'add'} size={'medium'} />
-                        </LinkButton>
+                        <div className="fieldList">
+                            <div className="field">
+                                <p className="field__title">Начало</p>
+
+                                <LinkButton>
+                                    Добавить дату
+                                    <InputActionIcon variant={'add'} size={'medium'} />
+                                </LinkButton>
+                            </div>
+
+                            <div className="field">
+                                <p className="field__title">Окончание</p>
+
+                                <LinkButton>
+                                    Добавить дату
+                                    <InputActionIcon variant={'add'} size={'medium'} />
+                                </LinkButton>
+                            </div>
+                        </div>
                     </div>
 
                     <hr className={styles.popup__divider} />
 
                     <div className={styles.popup__section}>
-                        <FieldBoxHeader title={'Время события'} />
+                        <div className="fieldBoxHeader">
+                            <p>Время события</p>
+                        </div>
+
+                        <div className="fieldList">
+                            <div className="field">
+                                <p className="field__title">Начало</p>
+
+                                <LinkButton>
+                                    Добавить дату
+                                    <InputActionIcon variant={'add'} size={'medium'} />
+                                </LinkButton>
+                            </div>
+
+                            <div className="field">
+                                <p className="field__title">Окончание</p>
+
+                                <LinkButton>
+                                    Добавить дату
+                                    <InputActionIcon variant={'add'} size={'medium'} />
+                                </LinkButton>
+                            </div>
+                        </div>
                     </div>
 
                     <hr className={styles.popup__divider} />
 
                     <div className={styles.popup__section}>
-                        <FieldBoxHeader title={'Повторение события'} />
+                        <div className="fieldBoxHeader">
+                            <p>Повторение события</p>
+                        </div>
+
+                        <div className="field__buttonBox">
+                            <LinkButton>
+                                Добавить повторение
+                                <InputActionIcon variant={'add'} size={'medium'} />
+                            </LinkButton>
+                        </div>
                     </div>
                 </div>
 
