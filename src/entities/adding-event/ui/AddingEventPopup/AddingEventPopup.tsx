@@ -6,6 +6,7 @@ import { InputActionIcon } from '@/entities/adding-event/ui/input-action-icon/In
 import { LinkButton } from '@/shared/buttons/ui/link-button/LinkButton'
 import { PopupButton } from '@/shared/buttons/ui/popup-button/PopupButton'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
+import { InputPlaceholder } from '@/shared/form/ui/input-placeholder/InputPlaceholder'
 import { Input } from '@/shared/form/ui/input/Input'
 import { Selector } from '@/shared/form/ui/selector/Selector'
 import { cn } from '@/shared/lib/utils/cn'
@@ -50,10 +51,10 @@ export function AddingEventPopup({ className }: Props) {
                             <div className="field">
                                 <p className="field__title">Начало</p>
 
-                                <LinkButton>
-                                    Добавить дату
-                                    <InputActionIcon variant={'add'} size={'medium'} />
-                                </LinkButton>
+                                <div className="form__valueGroup">
+                                    <InputPlaceholder value={'13 авг, 2024'} />
+                                    <InputActionIcon variant={'cross'} size={'medium'} />
+                                </div>
                             </div>
 
                             <div className="field">
