@@ -1,12 +1,13 @@
 'use client'
 
+import { EventColor } from '@/entities/adding-event/model/eventColor'
 import styles from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent.module.scss'
 import { DateHelper } from '@/shared/lib/utils/dateHelper'
 
 type Props = {
     size?: 'medium' | 'large'
     emoji: string
-    color: 'red' | 'orange' | 'yellow' | 'green' | 'aqua' | 'blue' | 'purple' | 'pink'
+    color: EventColor
     date?: string
     isHour12?: boolean
 }

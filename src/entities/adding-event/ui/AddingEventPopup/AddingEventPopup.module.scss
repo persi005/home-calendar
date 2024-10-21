@@ -63,8 +63,15 @@
     }
 
     &__emojiSelector {
-        &:is(div) {
+        &:is(div):is([data-size]) {
             font-size: 20px;
         }
+    }
+
+    &__input_date {
+        width: 100px;
+    }
+    &__input_time {
+        width: 60px;
     }
 }
