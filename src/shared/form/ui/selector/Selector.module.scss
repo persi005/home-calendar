@@ -1,7 +1,5 @@
 .selector {
     padding: 0 10px;
-    min-height: 32px;
-    max-height: 32px;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -9,12 +7,22 @@
     border: 1px solid var(--gray-200);
     border-radius: var(--border-radius-8);
     color: inherit;
-    font-size: var(--font-size-16);
     user-select: none;
     cursor: pointer;
 
     &[data-placeholder] {
         color: var(--gray-500);
+    }
+
+    &[data-size='small'] {
+        min-height: var(--form-height-small);
+        max-height: var(--form-height-small);
+        font-size: var(--font-size-14);
+    }
+    &[data-size='medium'] {
+        min-height: var(--form-height-medium);
+        max-height: var(--form-height-medium);
+        font-size: var(--font-size-16);
     }
 
     svg {
