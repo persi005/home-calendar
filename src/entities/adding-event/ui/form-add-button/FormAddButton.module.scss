@@ -1,0 +1,24 @@
+.button {
+    min-height: 24px;
+    max-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue-700);
+    font-size: var(--font-size-14);
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--blue-600);
+        border-radius: var(--border-radius-100);
+
+        svg {
+            --icon-size: var(--icon-size-10);
+            --icon-background: var(--white);
+        }
+    }
+}
