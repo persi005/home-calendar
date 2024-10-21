@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
 import { golosText, inter } from '@/app/fonts'
+import type { Metadata } from 'next'
 import './globals.scss'
+import { Providers } from '@/app/providers'
 import { cn } from '@/shared/lib/utils/cn'
 
 export const metadata: Metadata = {
@@ -15,7 +16,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn(golosText.variable, inter.variable)}>{children}</body>
+            <body className={cn(golosText.variable, inter.variable)}>
+                <Providers>{children}</Providers>
+            </body>
         </html>
     )
 }
