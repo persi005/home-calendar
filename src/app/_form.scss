@@ -4,4 +4,10 @@
         align-items: center;
         gap: 8px;
     }
+
+    &__formGroup_small {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
 }
