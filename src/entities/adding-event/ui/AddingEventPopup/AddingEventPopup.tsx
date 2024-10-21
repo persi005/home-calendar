@@ -1,7 +1,6 @@
 'use client'
 
 import { EventColor } from '@/entities/adding-event/model/eventColor'
-import styles from '@/entities/adding-event/ui/AddingEventPopup/AddingEventPopup.module.scss'
 import { ColorItem } from '@/entities/adding-event/ui/color-item/ColorItem'
 import { FormAddButton } from '@/entities/adding-event/ui/form-add-button/FormAddButton'
 import { FormIconButton } from '@/entities/adding-event/ui/form-icon-button/FormIconButton'
@@ -10,13 +9,24 @@ import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/Calendar
 import { Input } from '@/shared/form/ui/input/Input'
 import { Selector } from '@/shared/form/ui/selector/Selector'
 import { cn } from '@/shared/lib/utils/cn'
+import {
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    ModalOverlay,
+    useDisclosure,
+} from '@chakra-ui/react'
 import { useState } from 'react'
+import styles from './AddingEventPopup.module.scss'
 
 type Props = {
-    className?: string
+    onClose: () => void
 }
 
-export function AddingEventPopup({ className }: Props) {
+export function AddingEventPopup({ onClose }: Props) {
     const [formData, setFormData] = useState({
         name: 'My first event',
         emoji: '🏀',
@@ -32,9 +42,9 @@ export function AddingEventPopup({ className }: Props) {
     }
 
     return (
-        <div className={cn(className, styles.popupBox)}>
-            <div className={styles.popup}>
-                <div className={styles.popup__inner}>
+        <ModalContent className={styles.popup} w="334px" sx={{ background: 'var(--gray-50)' }}>
+            <ModalBody className={styles.popup__body} p="8px">
+                <div>
                     <div className={styles.popup__iconBox}>
                         <CalendarEvent emoji={formData.emoji} color={formData.color} size={'large'} />
                     </div>
@@ -58,9 +68,11 @@ export function AddingEventPopup({ className }: Props) {
                             />
                         ))}
                     </div>
+                </div>
 
-                    <hr className={styles.popup__divider} />
+                <hr className={styles.popup__divider} />
 
+                <div className={styles.popup__sectionList}>
                     <div className={styles.popup__section}>
                         <div className="fieldBoxHeader">
                             <p>Дата события</p>
@@ -193,16 +205,24 @@ export function AddingEventPopup({ className }: Props) {
                         </div>
                     </div>
                 </div>
+            </ModalBody>
 
-                <div className={styles.popup__buttonGroup}>
-                    <PopupButton variant="tinted" color="gray">
-                        Отменить
-                    </PopupButton>
-                    <PopupButton variant="tinted" color="blue">
-                        Создать
-                    </PopupButton>
-                </div>
-            </div>
-        </div>
+            <ModalFooter className={styles.popup__buttonGroup} p="0">
+                <PopupButton variant="tinted" color="gray" onClick={onClose}>
+                    Отменить
+                </PopupButton>
+
+                <PopupButton
+                    variant="tinted"
+                    color="blue"
+                    onClick={() => {
+                        alert('Created!')
+                        onClose()
+                    }}
+                >
+                    Создать
+                </PopupButton>
+            </ModalFooter>
+        </ModalContent>
     )
 }
