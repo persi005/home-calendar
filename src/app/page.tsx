@@ -1,11 +1,12 @@
-import PlusSvg from '/public/icons/symbol/plus.svg'
-import styles from './page.module.scss'
+import { EventColor } from '@/entities/adding-event/model/eventColor'
+import { AddingEventPopup } from '@/entities/adding-event/ui/AddingEventPopup/AddingEventPopup'
+import { CalendarBox } from '@/entities/calendar/ui/CalendarBox/CalendarBox'
+import { SidebarItem } from '@/entities/sidebar/ui/SidebarItem/SidebarItem'
 import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
 import { CalendarPeriodEvent } from '@/shared/calendar-event/ui/CalendarPeriodEvent/CalendarPeriodEvent'
-import { SidebarItem } from '@/entities/sidebar/ui/SidebarItem/SidebarItem'
-import { CalendarBox } from '@/entities/calendar/ui/CalendarBox/CalendarBox'
-import { AddingEventPopup } from '@/entities/adding-event/ui/AddingEventPopup/AddingEventPopup'
+import PlusSvg from '/public/icons/symbol/plus.svg'
+import styles from './page.module.scss'
 
 export default function Home() {
     return (
@@ -28,11 +29,11 @@ export default function Home() {
 
                     <div className={styles.sidebar__content}>
                         <TextDivider title={'Test'} />
-                        <CalendarEvent emoji="🏀" color="red" />
+                        <CalendarEvent emoji="🏀" color={EventColor.Red} />
                         <TextDivider title={'Test'} />
-                        <CalendarEvent emoji="🏀" color="red" date={'2024-09-17T05:13'} />
+                        <CalendarEvent emoji="🏀" color={EventColor.Red} date={'2024-09-17T05:13'} />
                         <TextDivider title={'Test'} />
-                        <CalendarEvent emoji="🏀" color="red" date={'2024-09-17T05:13'} isHour12={true} />
+                        <CalendarEvent emoji="🏀" color={EventColor.Red} date={'2024-09-17T05:13'} isHour12={true} />
                         <TextDivider title={'Test'} />
                         <CalendarPeriodEvent emoji="🏀" color="red" />
                         <TextDivider title={'Test'} />
