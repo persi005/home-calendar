@@ -1,3 +1,5 @@
+## About project
+
 The project of a home calendar which allows to indicate all of your events and see it in front of your eyes without any reminder things.
 
 ## Getting Started
