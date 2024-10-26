@@ -17,6 +17,7 @@
     &:has([class*='__time']):not(:has([class*='__hour12'])) {
         grid-template-areas: 'emoji' 'time';
         column-gap: 1px;
+        row-gap: 2px;
 
         [class*='__emoji'] {
             text-align: center;
@@ -35,7 +36,7 @@
 
         &:has([class*='__time']) {
             [class*='__emoji'] {
-                margin-top: -4px;
+                margin-top: -2px;
                 font-size: 15px;
             }
         }
@@ -86,6 +87,7 @@
 
     &__emoji {
         grid-area: emoji;
+        line-height: 1;
     }
 
     &__time {
