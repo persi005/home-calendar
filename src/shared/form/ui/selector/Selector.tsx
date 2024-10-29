@@ -2,8 +2,8 @@
 
 import styles from '@/shared/form/ui/selector/Selector.module.scss'
 import { cn } from '@/shared/lib/utils/cn'
+import Image from 'next/image'
 import { DetailedHTMLProps, HTMLAttributes, useEffect, useRef } from 'react'
-import ArrowSelectorSvg from '/public/icons/symbol/arrow-select.svg'
 
 type Props = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
     placeholder?: string
@@ -23,7 +23,7 @@ export function Selector({ className, value = '', placeholder = '', size = 'medi
     return (
         <div ref={selector} className={cn(styles.selector, className)} data-size={size} {...props}>
             {value || placeholder}
-            <ArrowSelectorSvg />
+            <Image src={'/icons/symbol/arrow-select.svg'} width={20} height={20} alt={'Arrow select icon'} />
         </div>
     )
 }

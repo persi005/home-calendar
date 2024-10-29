@@ -2,14 +2,14 @@
 
 import { EventColor } from '@/entities/adding-event/model/eventColor'
 import { CalendarBox } from '@/entities/calendar/ui/CalendarBox/CalendarBox'
-import ModalHolder from '@/entities/main/ui/ModalHolder'
+import { ModalHolder } from '@/entities/modal-holder/ui/ModalHolder'
 import { ModalHolderContext } from '@/entities/providers/modalHolderProvider'
 import { SidebarItem } from '@/entities/sidebar/ui/SidebarItem/SidebarItem'
 import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
 import { CalendarPeriodEvent } from '@/shared/calendar-event/ui/CalendarPeriodEvent/CalendarPeriodEvent'
+import Image from 'next/image'
 import { useContext } from 'react'
-import PlusSvg from '/public/icons/symbol/plus.svg'
 import styles from './page.module.scss'
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
 
                         <div className={styles.sidebarHeader__buttonGroup}>
                             <button className={styles.sidebarHeader__button} onClick={onAddEventClick}>
-                                <PlusSvg />
+                                <Image src={'/icons/symbol/plus.svg'} width={20} height={20} alt={'Plus icon'} />
                             </button>
                         </div>
                     </div>

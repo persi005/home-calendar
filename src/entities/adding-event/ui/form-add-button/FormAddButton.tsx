@@ -1,6 +1,6 @@
 'use client'
 
-import PlusBoldSvg from '/public/icons/symbol/plus-bold.svg'
+import Image from 'next/image'
 import styles from './FormAddButton.module.scss'
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
@@ -13,7 +13,7 @@ export function FormAddButton({ value, ...props }: Props) {
             {value}
 
             <div className={styles.button__icon}>
-                <PlusBoldSvg />
+                <Image src={'/icons/symbol/plus-bold.svg'} width={20} height={20} alt={'Plus icon'} />
             </div>
         </button>
     )

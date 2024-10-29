@@ -1,10 +1,10 @@
 'use client'
 
+import styles from '@/entities/sidebar/ui/SidebarItem/SidebarItem.module.scss'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
 import { CalendarPeriodEvent } from '@/shared/calendar-event/ui/CalendarPeriodEvent/CalendarPeriodEvent'
-import StarSvg from '/public/icons/filled/star.svg'
-import styles from '@/entities/sidebar/ui/SidebarItem/SidebarItem.module.scss'
 import { DateHelper } from '@/shared/lib/utils/dateHelper'
+import Image from 'next/image'
 
 type Props = {
     title: string
@@ -48,7 +48,7 @@ export function SidebarItem({
                     <>
                         <div className={styles.SidebarItem__titleBox}>
                             <p className={styles.SidebarItem__title}>{title}</p>
-                            <StarSvg />
+                            <Image src={'/icons/filled/star.svg'} width={20} height={20} alt={'Star icon'} />
                         </div>
                     </>
                 ) : (

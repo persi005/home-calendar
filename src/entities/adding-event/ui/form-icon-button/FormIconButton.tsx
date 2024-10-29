@@ -1,8 +1,7 @@
 'use client'
 
 import styles from '@/entities/adding-event/ui/form-icon-button/FormIconButton.module.scss'
-import CrossBoldSvg from '/public/icons/symbol/cross-bold.svg'
-import PlusBoldSvg from '/public/icons/symbol/plus-bold.svg'
+import Image from 'next/image'
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
     size: 'small' | 'medium'
@@ -12,7 +11,11 @@ type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElemen
 export function FormIconButton({ size, variant, ...props }: Props) {
     return (
         <button className={styles.button} data-size={size} data-variant={variant} {...props}>
-            {variant === 'add' ? <PlusBoldSvg /> : <CrossBoldSvg />}
+            {variant === 'add' ? (
+                <Image src={'/icons/symbol/plus-bold.svg'} width={20} height={20} alt={'Plus icon'} />
+            ) : (
+                <Image src={'/icons/symbol/cross-bold.svg'} width={20} height={20} alt={'Cross icon'} />
+            )}
         </button>
     )
 }

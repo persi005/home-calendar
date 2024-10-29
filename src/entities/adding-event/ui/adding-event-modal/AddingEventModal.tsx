@@ -4,19 +4,17 @@ import { EventColor } from '@/entities/adding-event/model/eventColor'
 import { ColorItem } from '@/entities/adding-event/ui/color-item/ColorItem'
 import { FormAddButton } from '@/entities/adding-event/ui/form-add-button/FormAddButton'
 import { FormIconButton } from '@/entities/adding-event/ui/form-icon-button/FormIconButton'
-import modalStyles from '@/entities/main/ui/ModalHolder.module.scss'
+import modalStyles from '@/entities/modal-holder/ui/ModalHolder.module.scss'
 import { ModalHolderContext } from '@/entities/providers/modalHolderProvider'
 import { PopupButton } from '@/shared/buttons/ui/popup-button/PopupButton'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
 import { Input } from '@/shared/form/ui/input/Input'
 import { Selector } from '@/shared/form/ui/selector/Selector'
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay } from '@chakra-ui/react'
-import { useCallback, useContext, useEffect, useState } from 'react'
-import styles from './AddingEventModal.module.scss'
+import { useContext, useEffect, useState } from 'react'
+// import styles from './AddingEventModal.module.scss'
 
-type Props = {}
-
-export function AddingEventModal({}: Props) {
+export function AddingEventModal() {
     const { addingEventModal, emojiModal } = useContext(ModalHolderContext)
 
     const [formData, setFormData] = useState({

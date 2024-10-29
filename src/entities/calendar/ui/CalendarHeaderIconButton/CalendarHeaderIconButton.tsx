@@ -1,16 +1,17 @@
 'use client'
 
 import styles from '@/entities/calendar/ui/CalendarHeaderIconButton/CalendarHeaderIconButton.module.scss'
-import { FC, SVGProps } from 'react'
+import Image from 'next/image'
 
 type Props = {
-    Icon: FC<SVGProps<SVGElement>>
+    iconPath: string
+    alt: string
 }
 
-export function CalendarHeaderIconButton({ Icon }: Props) {
+export function CalendarHeaderIconButton({ iconPath, alt }: Props) {
     return (
         <button className={styles.button}>
-            <Icon />
+            <Image src={iconPath} width={20} height={20} alt={alt} />
         </button>
     )
 }
