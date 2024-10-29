@@ -1,31 +1,21 @@
 'use client'
 
 import { EventColor } from '@/entities/adding-event/model/eventColor'
-import { AddingEventPopup } from '@/entities/adding-event/ui/AddingEventPopup/AddingEventPopup'
 import { CalendarBox } from '@/entities/calendar/ui/CalendarBox/CalendarBox'
+import ModalHolder from '@/entities/main/ui/ModalHolder'
+import { ModalHolderContext } from '@/entities/providers/modalHolderProvider'
 import { SidebarItem } from '@/entities/sidebar/ui/SidebarItem/SidebarItem'
 import { TextDivider } from '@/entities/sidebar/ui/TextDivider/TextDivider'
 import { CalendarEvent } from '@/shared/calendar-event/ui/CalendarEvent/CalendarEvent'
 import { CalendarPeriodEvent } from '@/shared/calendar-event/ui/CalendarPeriodEvent/CalendarPeriodEvent'
-import {
-    Modal,
-    ModalBody,
-    ModalCloseButton,
-    ModalContent,
-    ModalFooter,
-    ModalHeader,
-    ModalOverlay,
-    useDisclosure,
-} from '@chakra-ui/react'
+import { useContext } from 'react'
 import PlusSvg from '/public/icons/symbol/plus.svg'
 import styles from './page.module.scss'
 
 export default function Home() {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { addingEventModal } = useContext(ModalHolderContext)
 
-    const onAddEventClick: React.MouseEventHandler<HTMLButtonElement> | undefined = (e) => {
-        onOpen()
-    }
+    const onAddEventClick = addingEventModal.onOpen
 
     return (
         <>
@@ -71,10 +61,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <Modal isOpen={isOpen} onClose={onClose} isCentered>
-                <ModalOverlay />
-                <AddingEventPopup onClose={onClose} />
-            </Modal>
+            <ModalHolder />
         </>
     )
 }

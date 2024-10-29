@@ -1,7 +1,7 @@
 import { golosText, inter } from '@/app/fonts'
 import type { Metadata } from 'next'
 import './globals.scss'
-import { Providers } from '@/app/providers'
+import { Providers } from '@/entities/providers/providers'
 import { cn } from '@/shared/lib/utils/cn'
 
 export const metadata: Metadata = {
